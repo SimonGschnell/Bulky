@@ -1,0 +1,9 @@
+@{
+    ViewData["Title"]="Welcome";
+}
+
+<h1>Welcome Page</h1>
+<p>here i have access to the message: <b>@ViewData["Message"]</b> and the optional id: <b>@ViewData["ID"]</b></p>
+@for(int i=0; i<Convert.ToInt32(ViewData["NumTimes"]); i++){
+    <p>repeating the message @(i+1) times: <b>@ViewData["Message"]</b></p>
+}
